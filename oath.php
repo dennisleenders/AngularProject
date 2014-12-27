@@ -9,6 +9,7 @@
 // Two-legged authentication : authentication without the need of user login ( only need key and secret )
 // Three-legged authentication : authentication with the need of user login ( need key and secret, and consumer token)
 // GET the term we past in our $.ajax in the URI by $_GET[""] requesting it
+// Using variales in a string in php : "{$var} much string"
 
 //---- INCLUDED FILES ----//
 include_once "public/oauth-php/OAuthStore.php";
