@@ -1,6 +1,9 @@
 ####### Javascripts ######
 
 `
-//= require vendor/angular.min.js
-//= require vendor/jquery.js
+//= require constructor/app.js
+//= require constructor/services.js
+//= require constructor/controllers.js
+//= require constructor/directives.js
+
 `
