@@ -30,13 +30,29 @@
   </head>
   <body ng-app="nounTranslate">
 
-    <section class="controller" ng-controller="apiController as api">
-      <div class="content">
-          <div class="image-container">
-            <img class="noun-image">
-          </div>
-      </div>
-    </section>
+    <div class="noun-wrapper">
+      
+      <!--=== NOUN Sentence ===-->
+      <section class="sentence" ng-controller="apiController as api">
+        <div class="colored-sidebar pink right"></div>
+        <!-- content -->
+      </section>
+
+      <!--=== NOUN homescreen ===-->
+      <section class="homescreen">
+        <div class="colored-sidebar pink"></div>
+        <div class="branding">  
+          <div class="logo"><span>noun</span>translate</div>
+          <div class="icon"></div>
+        <div class="colored-sidebar right"></div>
+      </section>
+
+      <!--=== NOUN Words ===-->
+      <section class="words">
+        <div class="colored-sidebar"></div>
+        <!-- content -->
+      </section>
+    </div>
 
     <!--=== Javascript ===-->
     <!-- Vendor -->
