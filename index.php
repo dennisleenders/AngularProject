@@ -9,6 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="Dennis Leenders and Tom Luijten">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
     <title>Noun Translate</title>
 
@@ -36,23 +39,26 @@
       <section class="sentence" ng-controller="apiController as api">
         <div class="colored-sidebar pink right"></div>
         <!-- content -->
-      </section>
+      </section><!--
 
-      <!--=== NOUN homescreen ===-->
-      <section class="homescreen">
+      --><!--=== NOUN homescreen ===--><!--
+      --><section class="homescreen">
         <div class="colored-sidebar pink"></div>
-        <div class="branding">  
-          <div class="logo"><span>noun</span>translate</div>
-          <div class="icon"></div>
+        <div class="branding">
+          <div class="branding-content">
+            <div class="logo"><p><span>noun</span>translate</p></div>
+            <div class="icon"><?php include("public/media/svg/travel-around-world.svg"); ?></div>
+          </div>
+        </div>
         <div class="colored-sidebar right"></div>
-      </section>
+      </section><!--
 
-      <!--=== NOUN Words ===-->
-      <section class="words">
+      --><!--=== NOUN Words ===--><!--
+      --><section class="words">
         <div class="colored-sidebar"></div>
         <!-- content -->
-      </section>
-    </div>
+      </section><!--
+    --></div>
 
     <!--=== Javascript ===-->
     <!-- Vendor -->
