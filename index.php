@@ -64,6 +64,7 @@
     <!-- Vendor -->
     <script type="text/javascript" src="public/javascripts/vendor/jquery.js"></script>
     <script type="text/javascript" src="public/javascripts/vendor/angular.js"></script>
+    <script type="text/javascript" src="public/javascripts/vendor/zepto.js"></script>
     <!-- App -->
     <script type="text/javascript" src="public/javascripts/app.js"></script>
   </body>

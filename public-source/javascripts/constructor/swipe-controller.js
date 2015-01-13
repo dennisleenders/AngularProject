@@ -1,15 +1,15 @@
 /* Swipe functie  */
 
 // Zepto(function($){
-//     var pagesElement = $('.pages'); /* Hier wordt een variabele gemaakt voor het element pages */
-//     var pages = pagesElement.children('.page'); /* Hier wordt een variabele gemaakt om meerdere DOM elementen aan te spreken, in dit geval .page binnen .pages */
-//     var pageIndex = 0;  // variabele voor de indexwaarde, in dit geval 
+//     var pagesElement = $('.noun-wrapper');
+//     var pages = pagesElement.children('section'); 
+//     var pageIndex = 0;  
     
-//    pagesElement.swipeRight(function(event) {    /* Functie geschreven om naar rechts te swipen */
+//    pagesElement.swipeRight(function(e) {    
 //         move('right');
 //     });
 
-//     pagesElement.swipeLeft(function(event) {    /* Functie geschreven om naar links te swipen */
+//     pagesElement.swipeLeft(function(ee) {    
 //         move('left');
 //     });
   
@@ -19,19 +19,19 @@
 //     var deviceWidth = 768;
 //   }
   
-// /* Move animatie */
+/* Move animatie */
 
 //     function move(direction){
-//         if(direction == 'left' && pageIndex < (pages.length - 1))  Als de afstand(=direction) naar links gaat EN de paginaIndex kleiner is dan de pages.length - 1 dan krijgt pageIndex +1 
-//         { pageIndex++;  /* Pagina index wordt met 1 verhoogd */
-//           }else if(direction == 'right' && pageIndex > 0) /* Anders als de afstand gelijk is aan rechts en de pagina index is groter dan 0, dan krijgt de pageIndex - 1 */
+//         if(direction == 'left' && pageIndex < (pages.length - 1))
+//         { pageIndex++;  
+//           }else if(direction == 'right' && pageIndex > 0)
 //     { pageIndex--;
-//           }else if(direction == 'begin')  /* Anders als de afstand gelijk is aan het begin, dan is pageIndex 0 */
+//           }else if(direction == 'begin')  
 //         { pageIndex = 0;
 //   }
-//     var position = pageIndex * deviceWidth;   /* Variabele voor positie is pageIndex x 320 ( de width van een mobiele scherm) */
-//       pages.animate({           /* Een animate die die zorgt voor de animatie dat de pagina's sliden naar de volgende pagina */
-//       left: '-' + position + 'px'   /* Als hij naar links gaat komt hij in de - posistie met als waarde pixel */
+//     var position = pageIndex * deviceWidth;   
+//       pages.animate({           
+//       left: '-' + position + 'px'   
 //     }, 250, 'ease-out');        
 //     }
 // });
