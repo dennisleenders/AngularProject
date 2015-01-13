@@ -2,20 +2,32 @@
 // COLOR SCHEMES ///////////
 ////////////////////////////
 
-$black: rgb(15, 15, 15);
-$red: rgb(229, 87, 68);
+$pink:#ed6565;
+$orange:#f0b483;
+$black:#1a1a1a;
 
-// Everyone obey's the general first
+// Mixin
+@mixin keyframes($animation-name){
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str){
+  -webkit-animation: #{$str};
+}
 
 html,body {
   height: 100%;
   width: 100%;
   text-align: center;
   overflow: hidden;
-}
-
-section {
-  display: inline-block;
 }
 
 h2 {
