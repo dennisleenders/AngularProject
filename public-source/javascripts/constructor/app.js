@@ -2,8 +2,8 @@
 var app = angular.module('nounTranslate', []);
 
 app.controller('apiController', function(){
-  console.log("Angular controller active");
 
+  var json
   var request_data = {
       url: 'oath.php',
       method: 'GET',
@@ -16,13 +16,19 @@ app.controller('apiController', function(){
   $.ajax({
       url: request_data.url,
       type: request_data.method,
-      data: request_data.data
+      data: request_data.data,
+      dataType: "json"
   }).done(function(data) {
-      console.log("Ajax done");
-      console.log("data -->",data);
+
+      json = data;
+      console.log(json);
+
+      for (var i = 0; i < json.icons.length; i++) {
+        $(".noun-image").attr("src", json.icons[i].preview_url)
+      };
+      
   }).fail(function(data) {
       console.log("Ajax fail");
-      console.log("data -->",data);
   });
 
 });
