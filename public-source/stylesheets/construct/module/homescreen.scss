@@ -1,0 +1,55 @@
+// Keyframes 
+@include keyframes(fullRotation){
+  0% {transform:rotate(0deg);}
+  100% {transform:rotate(360deg);}
+}
+
+.homescreen {
+  background: $black;
+  .branding {
+    display: block;
+    position: absolute;
+    left:50%;
+    top:50%;
+
+    .branding-content {
+      @include transform(translate(-50%,-40%));
+      .logo {
+        display: block;
+        position: relative;
+        width: 180px;
+        border-bottom: 1px solid white;
+        padding: 10px;
+
+        p {
+          font-family: "Raleway";
+          color:white;
+          font-size: 26px;
+          font-weight: 200;
+          text-align: center;
+
+          & span {
+            font-weight: 600;
+          }
+        }
+      }
+
+      .icon {
+        svg {
+          width: 120px;
+          padding-left: 10px;
+          margin-top: -2px;
+          fill:white;
+
+          g {
+            &.full-rotation {
+              @include animation('fullRotation 6s linear infinite');
+              @include transform-origin(51px, 51px);
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}
