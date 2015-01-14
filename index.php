@@ -57,6 +57,22 @@
       --><section class="words">
         <div class="colored-sidebar"></div>
         <!-- content -->
+        <div class="previous-button"></div>
+        <div class="word-container">
+          <h1><span>noun</span>words</h1>
+          <div class="category-body">
+            <p><span>noun</span>traveling</p><hr>
+            <div class="category-image">
+              <?php include("public/media/images/noun/traveling/pisa.svg"); ?>  
+              <?php include("public/media/images/noun/traveling/colisseum.svg"); ?>  
+              <?php include("public/media/images/noun/groceries/booze.svg"); ?>
+              <?php include("public/media/images/noun/groceries/booze.svg"); ?>
+              <?php include("public/media/images/noun/traveling/colisseum.svg"); ?>
+              <?php include("public/media/images/noun/traveling/pisa.svg"); ?>       
+            </div>
+          </div>
+
+        </div>
       </section><!--
     --></div>
 
