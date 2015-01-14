@@ -1,4 +1,3 @@
-
 var app = angular.module('nounTranslate', []);
 
 app.controller('apiController', function(){
@@ -21,7 +20,6 @@ app.controller('apiController', function(){
   }).done(function(data) {
 
       json = data;
-      console.log(json);
 
       for (var i = 0; i < json.icons.length; i++) {
         $(".noun-image").attr("src", json.icons[i].preview_url)

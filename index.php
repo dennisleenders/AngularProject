@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html >
 <!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
@@ -14,7 +14,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
     <title>Noun Translate</title>
-
     <!--=== Favicon ===-->
     <link rel='shortcut icon' type='image/x-icon' href='public/media/img/favicon.ico' />
 
@@ -58,19 +57,22 @@
         <div class="colored-sidebar"></div>
         <!-- content -->
         <div class="previous-button"></div>
-        <div class="word-container">
+        <div class="word-container" ng-controller="ProjectController as skill">
           <h1><span>noun</span>words</h1>
           <div class="category-body">
             <p><span>noun</span>traveling</p><hr>
-            <div class="category-image">
-              <?php include("public/media/images/noun/traveling/pisa.svg"); ?>  
-              <?php include("public/media/images/noun/traveling/colisseum.svg"); ?>  
-              <?php include("public/media/images/noun/groceries/booze.svg"); ?>
-              <?php include("public/media/images/noun/groceries/booze.svg"); ?>
-              <?php include("public/media/images/noun/traveling/colisseum.svg"); ?>
-              <?php include("public/media/images/noun/traveling/pisa.svg"); ?>       
+            <div class="category-image" ng-repeat="icon in knowledge.traveling">
+              <div class="knowledge-name">{{icon.name}}</div>
+              <div class="knowledge-background"></div>
+              <div class="knowledge-percentage {{skills.traveling.name}}"></div>  
             </div>
-          </div>
+
+            <p><span>noun</span>buisiness</p><hr>
+            <div class="category-image" ng-repeat="skill in skills.knowledge">
+              <div class="knowledge-name">{{skill.buisiness.name}}</div>
+              <div class="knowledge-background"></div>
+              <div class="knowledge-percentage {{skills.traveling.name}}"></div>  
+            </div>
 
         </div>
       </section><!--

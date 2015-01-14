@@ -1,4 +1,4 @@
-var noun = [{
+var nounWordJson = [{
 	"traveling": [{
 			"name": "Kenneth Appiah",
 			"label": "pisa",
@@ -28,12 +28,12 @@ var noun = [{
 			"name": "Kyle Tezak",
 			"label": "fish",
 			"src": "public/media/images/noun/groceries/fish.svg"
-		}
+		},
 		{
 			"name": "Kyle Tezak",
 			"label": "ice cream",
 			"src": "public/media/images/noun/groceries/icecream.svg"
-		}
+		},
 		{
 			"name": "Kyle Tezak",
 			"label": "meat",
@@ -80,7 +80,7 @@ var noun = [{
 			"src": "public/media/images/noun/recreation/pool.svg"
 		},
 		{
-			"name": "1982"
+			"name": "1982",
 			"label": "tennis",
 			"src": "public/media/images/noun/recreation/tennis.svg"
 	}],
@@ -95,7 +95,7 @@ var noun = [{
 			"src": "public/media/images/noun/health/ehbo.svg"
 		},
 		{
-			"name": "Unknown"
+			"name": "Unknown",
 			"label": "pregnant",
 			"src": "public/media/images/noun/health/pregnant.svg"
 	}],
@@ -129,4 +129,4 @@ var noun = [{
 			"label": "wheelchair",
 			"src": "public/media/images/noun/transport/wheelchair.svg"
 	}],
-}]
+}];
