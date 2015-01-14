@@ -42,7 +42,7 @@
       </section><!--
 
       --><!--=== NOUN homescreen ===--><!--
-      --><section class="homescreen">
+      --><section class="homescreen" id="homescreen-swipe">
         <div class="colored-sidebar pink"></div>
         <div class="branding">
           <div class="branding-content">
@@ -64,7 +64,7 @@
     <!-- Vendor -->
     <script type="text/javascript" src="public/javascripts/vendor/jquery.js"></script>
     <script type="text/javascript" src="public/javascripts/vendor/angular.js"></script>
-    <script type="text/javascript" src="public/javascripts/vendor/zepto.js"></script>
+    <script type="text/javascript" src="public/javascripts/vendor/hammer.js"></script>
     <!-- App -->
     <script type="text/javascript" src="public/javascripts/app.js"></script>
   </body>
