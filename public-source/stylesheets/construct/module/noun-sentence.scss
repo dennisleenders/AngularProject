@@ -1,0 +1,64 @@
+.sentence {
+  background: $black;
+  text-align: center;
+
+  .search-bar {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    width: 85%;
+    margin-left: $sentenceMargin;
+    margin-top: 20px;
+    .search-field {
+      width: 100%;
+      height: 100%;
+      box-sizing:border-box;
+      font-family: "Raleway";
+      font-size: 16px;
+      letter-spacing: 1px;
+      padding-left:20px;
+    }
+    .search-icon {
+      display:block;
+      position: absolute;
+      top:0;
+      right:5px;
+      height: 100%;
+
+      svg {
+        width:50px;
+        height:50px;
+      }
+    }
+  }
+
+  .search-result {
+      display: inline-block;
+      height: 390px;
+      width:85%;
+      margin-left: $sentenceMargin;
+      border-bottom: 1px solid white;
+    .empty-search {
+      margin-top: 70px;
+      .icon {
+        svg {
+          width: 150px;
+          height: 150px;
+          fill:white;
+        }
+      }
+      .text {
+        display: inline-block;
+        width: 230px;
+        p {
+          font-family:"Raleway";
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 18px;
+          letter-spacing: 1px;
+          color:$whitegray;
+        }
+      }
+    }
+  }
+}
