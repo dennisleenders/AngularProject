@@ -4,7 +4,6 @@ var swipeElement = document.getElementById('homescreen-swipe');
 var hammertime = new Hammer(swipeElement);
 
 hammertime.on("panleft panright", function(e) {
-    console.log(e.type);
     swipeMove(e.type);
 });
 

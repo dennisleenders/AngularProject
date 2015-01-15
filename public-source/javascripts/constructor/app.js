@@ -3,6 +3,9 @@ var app = angular.module('nounTranslate', []);
 
 app.controller('apiController', function(){
 
+
+  
+
   var json
   var request_data = {
       url: 'oath.php',

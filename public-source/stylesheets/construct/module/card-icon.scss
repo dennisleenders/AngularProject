@@ -1,0 +1,71 @@
+.sentence-content {
+  .search-result {
+      display: inline-block;
+      height: 340px;
+      width: 100%;
+
+    .icon-card {
+      display: block;
+      position: absolute;
+      box-sizing:border-box;
+      width: 100%;
+
+      .icon-holder {
+        width: 100%;
+        height: 320px;
+
+        .icon {
+          display: inline-block;
+          height: 200px;
+          width: 200px;
+          border-radius:260px;
+          background:white;
+          margin-top: 75px;
+
+          svg {
+            @include transform(translate(0,90%));
+          }
+        }
+      }
+
+      .author {
+         p {
+          display: inline-block;
+          font-family: "Raleway";
+          font-size: 12px;
+          font-weight: 400;
+          color:white;
+
+          &.strong {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    
+    .empty-card {
+      display: none;
+      margin-top: 70px;
+      .icon {
+        svg {
+          width: 150px;
+          height: 150px;
+          fill:white;
+        }
+      }
+      .text {
+        display: inline-block;
+        width: 230px;
+        p {
+          font-family:"Raleway";
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 18px;
+          letter-spacing: 1px;
+          color:$whitegray;
+        }
+      }
+    }
+
+  }
+}
