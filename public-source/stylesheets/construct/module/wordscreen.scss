@@ -31,10 +31,16 @@
         		width: 75%;
         		margin-bottom: 25px;
         	}
-        	.category-image{
+        	.category-section{
+        		display: inline-block;
         		svg{
         			fill:white;
         			padding-top: 10px;
+        		}
+        		.category-image{
+        			padding: 5px;
+        			width: 50px;
+        			height: 50px;
         		}
         	}
         }

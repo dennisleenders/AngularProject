@@ -60,14 +60,34 @@
         <div class="word-container" ng-controller="imageController as imageCtrl">
           <h1><span>noun</span>words</h1>
           <div class="category-body">
-            <p><span>noun</span>traveling</p><hr>
-            <div class="category-image" ng-repeat="icon in imageCtrl.imageList.travel">
-              <h1 style="color: white">{{icon.name}}</h1>
+            <p><span>noun</span>travel</p><hr>
+            <div class="category-section" ng-repeat="icon in imageCtrl.imageList.travel">
+              <div class="category-image" ng-include="icon.src"></div>
             </div>
 
-            <p><span>noun</span>swek</p><hr>
-            <div class="category-image" ng-repeat="icon in imageCtrl.imageList.test">
-              <h1 style="color: white">{{icon.name}}</h1>
+            <p><span>noun</span>groceries</p><hr>
+            <div class="category-section" ng-repeat="icon in imageCtrl.imageList.groceries">
+              <div class="category-image" ng-include="icon.src"></div>
+            </div>
+
+            <p><span>noun</span>general</p><hr>
+            <div class="category-section" ng-repeat="icon in imageCtrl.imageList.general">
+              <div class="category-image" ng-include="icon.src"></div>
+            </div>
+
+            <p><span>noun</span>recreation</p><hr>
+            <div class="category-section" ng-repeat="icon in imageCtrl.imageList.recreation">
+              <div class="category-image" ng-include="icon.src"></div>
+            </div>
+
+            <p><span>noun</span>health</p><hr>
+            <div class="category-section" ng-repeat="icon in imageCtrl.imageList.health">
+              <div class="category-image" ng-include="icon.src"></div>
+            </div>
+
+            <p><span>noun</span>transport</p><hr>
+            <div class="category-section" ng-repeat="icon in imageCtrl.imageList.transport">
+              <div class="category-image" ng-include="icon.src"></div>
             </div>
         </div>
       </section><!--
