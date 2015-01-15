@@ -46,16 +46,36 @@
               <img class="cancel" src="public/media/img/cross-icon.png">
             </div>
           </div>
+          <div class="search-result">
+            <div class="icon-card">
+              <div class="icon-holder">
+                <div class="icon">
+                  <?php include("public/media/svg/duck.svg"); ?>
+                </div>
+              </div>
+                <div class="author">
+                  <p class="strong">created by : </p>
+                  <p class="name">dennis leenders</p>
+                </div>
+            </div>
+            <div class="card-position">
+              <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="empty-card">
+              <div class="icon"><?php include("public/media/svg/search.svg"); ?></div>
+              <div class="text"><p>Search for a word you want to have translated into your own fancy icon. You can click on the icons to 'add' them below, to form your own sentence</p></div>
+            </div>
+          </div>
           <div class="search-completion">
             <div class="completion-content">
               <div class="word">plane</div>
             </div>
-          </div>
-          <div class="search-result">
-            <div class="empty-search">
-              <div class="icon"><?php include("public/media/svg/search.svg"); ?></div>
-              <div class="text"><p>Search for a word you want to have translated into your own fancy icon. You can click on the icons to 'add' them below, to form your own sentence</p></div>
-            <div>
           </div>
         </div>
       </section><!--

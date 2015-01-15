@@ -43,37 +43,6 @@
       }
     }
 
-    .search-result {
-        display: inline-block;
-        height: 390px;
-        width: 100%;
-        border-bottom: 1px solid white;
-
-      .empty-search {
-        display: none;
-        margin-top: 70px;
-        .icon {
-          svg {
-            width: 150px;
-            height: 150px;
-            fill:white;
-          }
-        }
-        .text {
-          display: inline-block;
-          width: 230px;
-          p {
-            font-family:"Raleway";
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 18px;
-            letter-spacing: 1px;
-            color:$whitegray;
-          }
-        }
-      }
-    }
-
     .search-completion {
       display: block;
       position: absolute;

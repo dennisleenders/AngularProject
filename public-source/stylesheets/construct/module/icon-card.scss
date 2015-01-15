@@ -1,0 +1,95 @@
+.sentence-content {
+  .search-result {
+      display: inline-block;
+      height: 390px;
+      width: 100%;
+      border-bottom: 1px solid white;
+
+    .icon-card {
+      display: block;
+      position: absolute;
+      box-sizing:border-box;
+      width: 100%;
+
+      .icon-holder {
+        width: 100%;
+        height: 320px;
+
+        .icon {
+          display: inline-block;
+          height: 200px;
+          width: 200px;
+          border-radius:260px;
+          background:white;
+          margin-top: 75px;
+
+          svg {
+            @include transform(translate(0,90%));
+          }
+        }
+      }
+
+      .author {
+         p {
+          display: inline-block;
+          font-family: "Raleway";
+          font-size: 12px;
+          font-weight: 400;
+          color:white;
+
+          &.strong {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .card-position {
+      display: block;
+      position: absolute;
+      bottom:17px;
+      width: 100%;
+      height: 30px;
+      
+
+      ul {
+        li {
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          border-radius: 4px;
+          border:1px solid white;
+          
+          &.active {
+            background:white;
+          }
+        }
+      }
+    }
+
+    .empty-card {
+      display: none;
+      margin-top: 70px;
+      .icon {
+        svg {
+          width: 150px;
+          height: 150px;
+          fill:white;
+        }
+      }
+      .text {
+        display: inline-block;
+        width: 230px;
+        p {
+          font-family:"Raleway";
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 18px;
+          letter-spacing: 1px;
+          color:$whitegray;
+        }
+      }
+    }
+
+  }
+}
