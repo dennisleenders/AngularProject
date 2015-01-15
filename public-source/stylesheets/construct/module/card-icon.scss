@@ -1,9 +1,8 @@
 .sentence-content {
   .search-result {
       display: inline-block;
-      height: 390px;
+      height: 340px;
       width: 100%;
-      border-bottom: 1px solid white;
 
     .icon-card {
       display: block;
@@ -43,30 +42,7 @@
         }
       }
     }
-
-    .card-position {
-      display: block;
-      position: absolute;
-      bottom:17px;
-      width: 100%;
-      height: 30px;
-      
-
-      ul {
-        li {
-          display: inline-block;
-          width: 5px;
-          height: 5px;
-          border-radius: 4px;
-          border:1px solid white;
-          
-          &.active {
-            background:white;
-          }
-        }
-      }
-    }
-
+    
     .empty-card {
       display: none;
       margin-top: 70px;

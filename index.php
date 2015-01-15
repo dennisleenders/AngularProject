@@ -49,7 +49,7 @@
           <div class="search-result">
             <div class="icon-card">
               <div class="icon-holder">
-                <div class="icon">
+                <div class="icon circle">
                   <?php include("public/media/svg/duck.svg"); ?>
                 </div>
               </div>
@@ -57,15 +57,6 @@
                   <p class="strong">created by : </p>
                   <p class="name">dennis leenders</p>
                 </div>
-            </div>
-            <div class="card-position">
-              <ul>
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
             </div>
             <div class="empty-card">
               <div class="icon"><?php include("public/media/svg/search.svg"); ?></div>
@@ -75,6 +66,26 @@
           <div class="search-completion">
             <div class="completion-content">
               <div class="word">plane</div>
+            </div>
+          </div>
+          <div class="card-position">
+            <ul>
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="sentence-creator">
+            <div class="icon-holder">
+              <div class="icon"></div>
+
+              <div class="icon plus">+</div>
+              <div class="icon"></div>
+
+              <div class="icon plus">+</div>
+              <div class="icon"></div>
             </div>
           </div>
         </div>

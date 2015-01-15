@@ -6,6 +6,7 @@
     display: inline-block;
     position: relative;
     width:85%;
+    height: 100%;
     margin-left: $sentenceMargin;
 
     .search-bar {
@@ -51,7 +52,7 @@
       height:0px;
       background: white;
       text-align:center;
-      @include transition(height 1.2s ease-out);
+      @include transition(height .8s ease-out);
       backface-visibility: hidden;
       overflow: hidden;
 
@@ -78,8 +79,8 @@
         }
       }
       .search-completion {
-        height: 350px;
-        @include transition(height 1.2s ease-out);
+        height: 360px;
+        @include transition(height .8s ease-out);
         backface-visibility:hidden;
       }
     }

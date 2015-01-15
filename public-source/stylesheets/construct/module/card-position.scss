@@ -1,0 +1,20 @@
+.card-position {
+  display: block;
+  position: relative;
+  width: 100%;
+  
+  ul {
+    li {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 4px;
+      border:1px solid white;
+      
+      &.active {
+        background:white;
+      }
+    }
+  }
+
+}
