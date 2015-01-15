@@ -35,17 +35,23 @@
 
     <div class="noun-wrapper">
       
-      <!--=== NOUN Sentence ===-->
+      <!--=== NOUN Sentence [ApiController] ===-->
       <section class="sentence" ng-controller="apiController as api">
         <div class="colored-sidebar pink right"></div>
         <div class="sentence-content">
+
+          <!-- searchbar -->
           <div class="search-bar">
-            <input class="search-field" type="text" placeholder="search...">
+            <form class="form">
+              <input class="search-field" type="text" placeholder="search...">
+            </form>
             <div class="search-icon">
               <img class="search" src="public/media/img/search-icon.png">
               <img class="cancel" src="public/media/img/cross-icon.png">
             </div>
           </div>
+
+          <!-- search result cards -->
           <div class="search-result">
             <div class="icon-card">
               <div class="icon-holder">
@@ -58,16 +64,22 @@
                   <p class="name">dennis leenders</p>
                 </div>
             </div>
+
+            <!-- empty search card -->
             <div class="empty-card">
               <div class="icon"><?php include("public/media/svg/search.svg"); ?></div>
               <div class="text"><p>Search for a word you want to have translated into your own fancy icon. You can click on the icons to 'add' them below, to form your own sentence</p></div>
             </div>
           </div>
+
+          <!-- search suggestions -->
           <div class="search-completion">
             <div class="completion-content">
               <div class="word">plane</div>
             </div>
           </div>
+
+          <!-- card orbs -->
           <div class="card-position">
             <ul>
               <li class="active"></li>
@@ -77,6 +89,8 @@
               <li></li>
             </ul>
           </div>
+
+          <!-- sentence creator -->
           <div class="sentence-creator">
             <div class="icon-holder">
               <div class="icon"></div>
@@ -88,6 +102,7 @@
               <div class="icon"></div>
             </div>
           </div>
+
         </div>
       </section><!--
 
