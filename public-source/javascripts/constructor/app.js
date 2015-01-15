@@ -30,9 +30,7 @@ app.controller('apiController', function(){
           json = data;
           console.log(json);
 
-          for (var i = 0; i < json.icons.length; i++) {
-            $(".noun-image").attr("src", json.icons[i].preview_url)
-          };
+          
           
       }).fail(function(data) {
           console.log("Ajax fail");

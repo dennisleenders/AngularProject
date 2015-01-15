@@ -37,7 +37,8 @@
       .icon {
         svg {
           width: 120px;
-          //padding-left: 10px;
+          margin-left: -20px;
+          padding-left: 20px;
           margin-top: -2px;
           fill:white;
 
@@ -47,6 +48,21 @@
               @include transform-origin(51px, 51px);
               
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+.iphone {
+  .homescreen {
+    .branding {
+      .branding-content{
+        .icon {
+          svg {
+            margin-left: 0;
+            padding-left:0;
           }
         }
       }

@@ -56,7 +56,7 @@
             <div class="icon-card">
               <div class="icon-holder">
                 <div class="icon circle">
-                  <?php include("public/media/svg/duck.svg"); ?>
+                  <div ng-include="'public/media/svg/duck.svg'"></div>
                 </div>
               </div>
                 <div class="author">
@@ -67,7 +67,7 @@
 
             <!-- empty search card -->
             <div class="empty-card">
-              <div class="icon"><?php include("public/media/svg/search.svg"); ?></div>
+              <div class="icon"><div ng-include="'public/media/svg/search.svg'"></div></div>
               <div class="text"><p>Search for a word you want to have translated into your own fancy icon. You can click on the icons to 'add' them below, to form your own sentence</p></div>
             </div>
           </div>
@@ -112,7 +112,7 @@
         <div class="branding">
           <div class="branding-content">
             <div class="logo"><p><span>noun</span>translate</p></div>
-            <div class="icon"><?php include("public/media/svg/travel-around-world.svg"); ?></div>
+            <div class="icon"><div ng-include="'public/media/svg/travel-around-world.svg'"></div></div>
           </div>
         </div>
         <div class="colored-sidebar right"></div>

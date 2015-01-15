@@ -1,6 +1,7 @@
 ####### Javascripts ######
 
 `
+//= require constructor/browser-check.js
 //= require constructor/app.js
 //= require constructor/searchbar.js
 //= require constructor/swipe-controller.js
