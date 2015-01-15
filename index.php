@@ -38,17 +38,25 @@
       <!--=== NOUN Sentence ===-->
       <section class="sentence" ng-controller="apiController as api">
         <div class="colored-sidebar pink right"></div>
-        <div class="search-bar">
-          <input class="search-field" type="text" placeholder="search...">
-          <div class="search-icon">
-            <?php include("public/media/svg/search.svg"); ?>
+        <div class="sentence-content">
+          <div class="search-bar">
+            <input class="search-field" type="text" placeholder="search...">
+            <div class="search-icon">
+              <img class="search" src="public/media/img/search-icon.png">
+              <img class="cancel" src="public/media/img/cross-icon.png">
+            </div>
           </div>
-        </div>
-        <div class="search-result">
-          <div class="empty-search">
-            <div class="icon"><?php include("public/media/svg/search.svg"); ?></div>
-            <div class="text"><p>Search for a word you want to have translated into your own fancy icon. You can click on the icons to 'add' them below, to form your own sentence</p></div>
-          <div>
+          <div class="search-completion">
+            <div class="completion-content">
+              <div class="word">plane</div>
+            </div>
+          </div>
+          <div class="search-result">
+            <div class="empty-search">
+              <div class="icon"><?php include("public/media/svg/search.svg"); ?></div>
+              <div class="text"><p>Search for a word you want to have translated into your own fancy icon. You can click on the icons to 'add' them below, to form your own sentence</p></div>
+            <div>
+          </div>
         </div>
       </section><!--
 

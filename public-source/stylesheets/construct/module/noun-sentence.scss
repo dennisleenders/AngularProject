@@ -2,61 +2,106 @@
   background: $black;
   text-align: center;
 
-  .search-bar {
+  .sentence-content {
     display: inline-block;
     position: relative;
-    height: 50px;
-    width: 85%;
+    width:85%;
     margin-left: $sentenceMargin;
-    margin-top: 20px;
-    .search-field {
-      width: 100%;
-      height: 100%;
-      box-sizing:border-box;
-      font-family: "Raleway";
-      font-size: 16px;
-      letter-spacing: 1px;
-      padding-left:20px;
-    }
-    .search-icon {
-      display:block;
-      position: absolute;
-      top:0;
-      right:5px;
-      height: 100%;
 
-      svg {
-        width:50px;
-        height:50px;
-      }
-    }
-  }
-
-  .search-result {
+    .search-bar {
       display: inline-block;
-      height: 390px;
-      width:85%;
-      margin-left: $sentenceMargin;
-      border-bottom: 1px solid white;
-    .empty-search {
-      margin-top: 70px;
-      .icon {
-        svg {
-          width: 150px;
-          height: 150px;
-          fill:white;
+      position: relative;
+      height: 50px;
+      width: 100%;
+      margin-top: 20px;
+      .search-field {
+        width: 100%;
+        height: 100%;
+        box-sizing:border-box;
+        font-family: "Raleway";
+        font-size: 16px;
+        letter-spacing: 1px;
+        padding-left:20px;
+        text-transform: lowercase;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .search-icon {
+        display:block;
+        position: absolute;
+        top:0;
+        right:5px;
+        height: 100%;
+
+        .cancel{display:none;}
+        .search{display:none;}
+
+        img {
+          width:50px;
+          height:50px;
         }
       }
-      .text {
+    }
+
+    .search-result {
         display: inline-block;
-        width: 230px;
-        p {
-          font-family:"Raleway";
-          font-weight: 300;
+        height: 390px;
+        width: 100%;
+        border-bottom: 1px solid white;
+
+      .empty-search {
+        display: none;
+        margin-top: 70px;
+        .icon {
+          svg {
+            width: 150px;
+            height: 150px;
+            fill:white;
+          }
+        }
+        .text {
+          display: inline-block;
+          width: 230px;
+          p {
+            font-family:"Raleway";
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 1px;
+            color:$whitegray;
+          }
+        }
+      }
+    }
+
+    .search-completion {
+      display: block;
+      position: absolute;
+      top:70px;
+      width: 100%;
+      height:0px;
+      background: white;
+      text-align:center;
+      @include transition(height 1.2s ease-out);
+      backface-visibility: hidden;
+      overflow: hidden;
+
+      &.active {
+        height: 350px;
+        @include transition(height 1.2s ease-out);
+        backface-visibility:hidden;
+      }
+
+      .completion-content {
+        display: inline-block;
+        position: relative;
+        width: 75%;
+        padding-top:15px;
+        border-top:1px solid black;
+
+        .word {
+          font-family: "Raleway";
           font-size: 16px;
-          line-height: 18px;
           letter-spacing: 1px;
-          color:$whitegray;
         }
       }
     }
