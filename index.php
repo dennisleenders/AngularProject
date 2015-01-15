@@ -57,23 +57,18 @@
         <div class="colored-sidebar"></div>
         <!-- content -->
         <div class="previous-button"></div>
-        <div class="word-container" ng-controller="ProjectController as skill">
+        <div class="word-container" ng-controller="imageController as imageCtrl">
           <h1><span>noun</span>words</h1>
           <div class="category-body">
             <p><span>noun</span>traveling</p><hr>
-            <div class="category-image" ng-repeat="icon in knowledge.traveling">
-              <div class="knowledge-name">{{icon.name}}</div>
-              <div class="knowledge-background"></div>
-              <div class="knowledge-percentage {{skills.traveling.name}}"></div>  
+            <div class="category-image" ng-repeat="icon in imageCtrl.imageList.travel">
+              <h1 style="color: white">{{icon.name}}</h1>
             </div>
 
-            <p><span>noun</span>buisiness</p><hr>
-            <div class="category-image" ng-repeat="skill in skills.knowledge">
-              <div class="knowledge-name">{{skill.buisiness.name}}</div>
-              <div class="knowledge-background"></div>
-              <div class="knowledge-percentage {{skills.traveling.name}}"></div>  
+            <p><span>noun</span>swek</p><hr>
+            <div class="category-image" ng-repeat="icon in imageCtrl.imageList.test">
+              <h1 style="color: white">{{icon.name}}</h1>
             </div>
-
         </div>
       </section><!--
     --></div>
@@ -82,7 +77,7 @@
     <!-- Vendor -->
     <script type="text/javascript" src="public/javascripts/vendor/jquery.js"></script>
     <script type="text/javascript" src="public/javascripts/vendor/angular.js"></script>
-    <script type="text/javascript" src="public/javascripts/vendor/zepto.js"></script>
+    <script type="text/javascript" src="public/javascripts/vendor/hammer.js"></script>
     <!-- App -->
     <script type="text/javascript" src="public/javascripts/app.js"></script>
   </body>

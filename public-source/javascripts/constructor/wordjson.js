@@ -1,4 +1,4 @@
-var nounWordJson = [{
+var nounWordJson = {
 	"traveling": [{
 			"name": "Kenneth Appiah",
 			"label": "pisa",
@@ -128,5 +128,5 @@ var nounWordJson = [{
 			"name": "Alex Auda Samora",
 			"label": "wheelchair",
 			"src": "public/media/images/noun/transport/wheelchair.svg"
-	}],
-}];
+	}]
+};
