@@ -2,7 +2,7 @@
   display: block;
   height: 100%;
   width: 300%;
-  margin-left: -100%;
+  margin-left: 0%;
   @include transition(margin-left 1s);
 
   &.sentence {

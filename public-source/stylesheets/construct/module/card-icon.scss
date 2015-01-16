@@ -9,6 +9,7 @@
       position: absolute;
       box-sizing:border-box;
       width: 100%;
+      background:$black;
 
       .icon-holder {
         width: 100%;
@@ -24,6 +25,14 @@
 
           svg {
             @include transform(translate(0,90%));
+          }
+
+          img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-40%);
           }
         }
       }

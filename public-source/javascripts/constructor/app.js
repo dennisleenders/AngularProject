@@ -1,11 +1,11 @@
 
 var app = angular.module('nounTranslate', []);
 
-app.controller('apiController', function(){
+app.controller('apiController', function($scope, $http){
 
   var searchField = $('.search-field');
   var inputValue;
-  var json
+  //var json;
 
   searchField.on('keydown',function(e){
     if(e.keyCode == 13){
@@ -20,21 +20,18 @@ app.controller('apiController', function(){
           } 
       };
 
-      $.ajax({
-          url: request_data.url,
-          type: request_data.method,
-          data: request_data.data,
-          dataType: "json"
-      }).done(function(data) {
-
-          json = data;
-          console.log(json);
-
-          
-          
-      }).fail(function(data) {
-          console.log("Ajax fail");
+      $http({
+        url: request_data.url,
+        method: request_data.method,
+        params: {term:request_data.data.term,site:request_data.data.site}
+      }).success(function(data){
+        //json = data;
+        $scope.iconResults = data.icons;
+        console.log($scope.iconResults[0]);
+      }).error(function(data){
+        console.log("Ajax fail");
       });
     }
-  })
+  });
+
 });

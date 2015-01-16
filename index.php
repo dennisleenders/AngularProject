@@ -36,9 +36,9 @@
     <div class="noun-wrapper">
       
       <!--=== NOUN Sentence [ApiController] ===-->
-      <section class="sentence" ng-controller="apiController as api">
+      <section class="sentence">
         <div class="colored-sidebar pink right"></div>
-        <div class="sentence-content">
+        <div class="sentence-content" ng-controller="apiController as api">
 
           <!-- searchbar -->
           <div class="search-bar">
@@ -53,15 +53,15 @@
 
           <!-- search result cards -->
           <div class="search-result">
-            <div class="icon-card">
+            <div class="icon-card" ng-repeat="icon in iconResults">
               <div class="icon-holder">
                 <div class="icon circle">
-                  <div ng-include="'public/media/svg/duck.svg'"></div>
+                  <img src="{{icon.preview_url_84}}">
                 </div>
               </div>
                 <div class="author">
                   <p class="strong">created by : </p>
-                  <p class="name">dennis leenders</p>
+                  <p class="name">{{icon.uploader.name}}</p>
                 </div>
             </div>
 
