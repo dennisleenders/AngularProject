@@ -57,7 +57,7 @@
               <div class="icon-card" ng-repeat="icon in iconResults">
                 <div class="icon-holder">
                   <div class="icon circle">
-                    <img src="{{icon.preview_url_84}}">
+                    <img src="{{icon.preview_url}}">
                   </div>
                 </div>
                   <div class="author">
