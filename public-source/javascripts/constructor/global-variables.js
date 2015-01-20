@@ -7,8 +7,11 @@ var swipeElement = document.getElementById('homescreen-swipe');
 // -- Card Swipe -- //
 var cardSwipeEl = document.getElementById('card-swipe');
 var cardEl = new Hammer(cardSwipeEl);
-var ticker = 0;
+var cardPosition = 0;
 var isSwiped = false;
+
+// -- Slider Dots -- //
+var sliderDots = $('.card-position');
 
 // -- Search Bar -- //
 var searchField = $(".search-field");

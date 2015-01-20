@@ -84,7 +84,7 @@
           <!-- card orbs -->
           <div class="card-position">
             <ul>
-              <li ng-repeat="icon in iconResults"></li>
+              <li ng-class="{active:$first}" ng-repeat="icon in iconResults"></li>
             </ul>
           </div>
 

@@ -20,7 +20,8 @@
           width: 100%;
           left:0;
           position:relative;
-          @include transition(left $animationSpeed);
+          @include opacity(1);
+          @include transition(all $animationSpeed);
 
           .icon {
             display: inline-block;
@@ -67,8 +68,8 @@
 
         &.swiped {
           .icon-holder {
-            left:-320px;
-            @include transition(left $animationSpeed);
+            @include opacity(0);
+            @include transition(all $animationSpeed);
           }
           .author {
             @include opacity(0);

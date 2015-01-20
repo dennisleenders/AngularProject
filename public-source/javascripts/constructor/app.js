@@ -4,7 +4,6 @@ var app = angular.module('nounTranslate', []);
 app.controller('apiController', function($scope, $http){
 
   var searchField = $('.search-field');
-  var cardPosition = $('.card-position');
   var inputValue;
   
   // On the keydown enter we will do a callback to the API of NOUNproject
@@ -31,11 +30,22 @@ app.controller('apiController', function($scope, $http){
         // If the call was a success we will set the json to the Controller's $scope (this).
         // This way our directives in the html can read them.
         $scope.iconResults = data.icons;
-        cardPosition.show();
+
+        // Will reset the cardPosition, so that the the cardSwipe() function gets correct values
+        cardPosition = 0;
+
+        // This will display:inline-block the little orbs that indicate what card you're watching
+        $scope.sliderDot();
+        
       }).error(function(data){
         console.log("Ajax fail");
       });
     }
   });
+  
+  $scope.sliderDot = function() {
+    sliderDots.show();
+    //in the HTML the ng-class="{active:$first}" will add .active to the first ng-repeated slider dot
+  };
 
 });
