@@ -1,6 +1,3 @@
-var searchField = $(".search-field");
-var searchContent = $(".sentence-content");
-var searchForm = $(".sentence-content .form");
 
 // This will trigger when the user clicks on the searchbar
 searchField.on("focus", function(){
