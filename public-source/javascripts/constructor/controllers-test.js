@@ -1,23 +1,8 @@
-(function() {
-    app.controller('imageController', function($scope){
+(function(){
+function imageController($scope){
+    $scope.imageList = imageJson;
+};
 
-     $scope.imageList = imageJson;
-     $scope.selectedIndex = null;
-     $scope.alreadySelected = false;
-     $scope.category;
-
-     $scope.imageClick = function($index, category){
-        console.log($scope.category, category);
-        $scope.category = category;
-
-        if($scope.selectedIndex == $index){
-            $index = -1;
-        }
-
-        $scope.selectedIndex = $index;
-     }
-
-    });
         var imageJson = {
         "travel": [{
                 "name": "Kenneth Appiah",
@@ -65,6 +50,11 @@
                 "src": "public/media/images/noun/groceries/union.png"
             }],
         "general": [
+            // {
+            //     "name": "Andy Santos-Johnson",
+            //     "label": "currency exchange",
+            //     "src": "public/media/images/noun/general/currency.png"
+            // },
             {
                 "name": "SuperAtic LABS",
                 "label": "information",
@@ -156,8 +146,4 @@
                 "src": "public/media/images/noun/transport/wheelchair.png"
             }]
         };
-        // #########
-
-        
-
-})();
+}());
