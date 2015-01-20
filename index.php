@@ -53,16 +53,18 @@
 
           <!-- search result cards -->
           <div class="search-result" id="card-swipe">
-            <div class="icon-card" ng-repeat="icon in iconResults">
-              <div class="icon-holder">
-                <div class="icon circle">
-                  <img src="{{icon.preview_url_84}}">
+            <div class="card-holder">
+              <div class="icon-card" ng-repeat="icon in iconResults">
+                <div class="icon-holder">
+                  <div class="icon circle">
+                    <img src="{{icon.preview_url_84}}">
+                  </div>
                 </div>
+                  <div class="author">
+                    <p class="strong">created by : </p>
+                    <p class="name">{{icon.uploader.name}}</p>
+                  </div>
               </div>
-                <div class="author">
-                  <p class="strong">created by : </p>
-                  <p class="name">{{icon.uploader.name}}</p>
-                </div>
             </div>
 
             <!-- empty search card -->

@@ -1,9 +1,4 @@
 
-var cardSwipeEl = document.getElementById('card-swipe');
-var cardEl = new Hammer(cardSwipeEl);
-var ticker = 0;
-var isSwiped = false;
-
 cardEl.on("panright", function(e) {
     swapCard(ticker, "right")
 });
@@ -22,18 +17,19 @@ function swapCard(position, direction) {
   if(isSwiped == false && cards.length != 0){
     var selectedCard;
     var nthChild;
-    console.log("check")
-    if(direction == "left"){
-      nthChild = ":nth-child(" + (cards.length - position) + ")";
+
+    if(direction == "left" && ticker < (cards.length - 1)){
+      nthChild = ":nth-of-type(" + (cards.length - position) + ")";
       selectedCard = $(".icon-card" + nthChild)
       selectedCard.addClass("swiped");
-      ticker++
-    }else if(ticker >= 1){
-      nthChild = ":nth-child(" + (cards.length - position + 1) + ")";
+      ticker = ticker + 1;
+    }else if(direction == "right" && ticker != 0){
+      nthChild = ":nth-of-type(" + (cards.length - position + 1) + ")";
       selectedCard = $(".icon-card" + nthChild);
       selectedCard.removeClass("swiped");
-      ticker--
-    };
+      ticker = ticker - 1;
+    }
+
     swapCardTimeout();
   }
 }
