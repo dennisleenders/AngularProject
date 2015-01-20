@@ -35,48 +35,60 @@
 
     <div class="noun-wrapper">
       
-      <!--=== NOUN Sentence ===-->
-      <section class="sentence" ng-controller="apiController as api">
+      <!--=== NOUN Sentence [ApiController] ===-->
+      <section class="sentence">
         <div class="colored-sidebar pink right"></div>
-        <div class="sentence-content">
+        <div class="sentence-content" ng-controller="apiController as api">
+
+          <!-- searchbar -->
           <div class="search-bar">
-            <input class="search-field" type="text" placeholder="search...">
+            <form class="form">
+              <input class="search-field" type="text" placeholder="search...">
+            </form>
             <div class="search-icon">
               <img class="search" src="public/media/img/search-icon.png">
               <img class="cancel" src="public/media/img/cross-icon.png">
             </div>
           </div>
-          <div class="search-result">
-            <div class="icon-card">
-              <div class="icon-holder">
-                <div class="icon circle">
-                  <?php include("public/media/svg/duck.svg"); ?>
+
+          <!-- search result cards -->
+          <div class="search-result" id="card-swipe">
+            <div class="card-holder">
+              <div class="icon-card" ng-repeat="icon in iconResults">
+                <div class="icon-holder">
+                  <div class="icon circle">
+                    <img src="{{icon.preview_url}}">
+                  </div>
                 </div>
+                  <div class="author">
+                    <p class="strong">created by : </p>
+                    <p class="name">{{icon.uploader.name}}</p>
+                  </div>
               </div>
-                <div class="author">
-                  <p class="strong">created by : </p>
-                  <p class="name">dennis leenders</p>
-                </div>
             </div>
+
+            <!-- empty search card -->
             <div class="empty-card">
-              <div class="icon"><?php include("public/media/svg/search.svg"); ?></div>
+              <div class="icon"><div ng-include="'public/media/svg/search.svg'"></div></div>
               <div class="text"><p>Search for a word you want to have translated into your own fancy icon. You can click on the icons to 'add' them below, to form your own sentence</p></div>
             </div>
           </div>
+
+          <!-- search suggestions -->
           <div class="search-completion">
             <div class="completion-content">
               <div class="word">plane</div>
             </div>
           </div>
+
+          <!-- card orbs -->
           <div class="card-position">
             <ul>
-              <li class="active"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li ng-class="{active:$first}" ng-repeat="icon in iconResults"></li>
             </ul>
           </div>
+
+          <!-- sentence creator -->
           <div class="sentence-creator">
             <div class="icon-holder">
               <div class="icon"></div>
@@ -88,6 +100,7 @@
               <div class="icon"></div>
             </div>
           </div>
+
         </div>
       </section><!--
 
@@ -97,7 +110,7 @@
         <div class="branding">
           <div class="branding-content">
             <div class="logo"><p><span>noun</span>translate</p></div>
-            <div class="icon"><?php include("public/media/svg/travel-around-world.svg"); ?></div>
+            <div class="icon"><div ng-include="'public/media/svg/travel-around-world.svg'"></div></div>
           </div>
         </div>
         <div class="colored-sidebar right"></div>

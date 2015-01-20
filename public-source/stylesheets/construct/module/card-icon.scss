@@ -4,47 +4,84 @@
       height: 340px;
       width: 100%;
 
-    .icon-card {
-      display: block;
+    .card-holder {
       position: absolute;
-      box-sizing:border-box;
+      height: 340px;
       width: 100%;
-
-      .icon-holder {
+      background:$black;
+      .icon-card {
+        display: block;
+        position: absolute;
+        box-sizing:border-box;
         width: 100%;
-        height: 320px;
+        height: 340px;
 
-        .icon {
-          display: inline-block;
-          height: 200px;
-          width: 200px;
-          border-radius:260px;
-          background:white;
-          margin-top: 75px;
+        .icon-holder {
+          width: 100%;
+          left:0;
+          position:relative;
+          @include opacity(1);
+          @include transition(all $animationSpeed);
 
-          svg {
-            @include transform(translate(0,90%));
+          .icon {
+            display: inline-block;
+            position: relative;
+            height: 200px;
+            width: 200px;
+            border-radius:260px;
+            border:1px solid $black;
+            background:white;
+            margin-top: 75px;
+
+            svg {
+              @include transform(translate(0,90%));
+            }
+
+            img {
+              display: block;
+              position: absolute;
+              width: 84px;
+              top: 50%;
+              left: 50%;
+              @include transform(translate(-50%,-50%));
+              -webkit-user-drag:none;
+            }
           }
         }
-      }
 
-      .author {
-         p {
-          display: inline-block;
-          font-family: "Raleway";
-          font-size: 12px;
-          font-weight: 400;
-          color:white;
+        .author {
+          margin-top: 25px;
+          background:$black;
+          @include opacity(1);
+          @include transition(opacity $animationSpeed);
+           p {
+            display: inline-block;
+            font-family: "Raleway";
+            font-size: 12px;
+            font-weight: 400;
+            color:white;
 
-          &.strong {
-            font-weight: 600;
+            &.strong {
+              font-weight: 600;
+            }
+          }
+        }
+
+        &.swiped {
+          .icon-holder {
+            @include opacity(0);
+            @include transition(all $animationSpeed);
+          }
+          .author {
+            @include opacity(0);
+            @include transition(opacity $animationSpeed);
           }
         }
       }
     }
-    
+      
     .empty-card {
-      display: none;
+      display: block;
       margin-top: 70px;
       .icon {
         svg {

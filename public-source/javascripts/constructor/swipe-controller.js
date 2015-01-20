@@ -1,9 +1,9 @@
 var wrapperElement = $(".noun-wrapper");
 var swipeElement = document.getElementById('homescreen-swipe');
 
-var hammertime = new Hammer(swipeElement);
+var modeSelection = new Hammer(swipeElement);
 
-hammertime.on("panleft panright", function(e) {
+modeSelection.on("panleft panright", function(e) {
     swipeMove(e.type);
 });
 
