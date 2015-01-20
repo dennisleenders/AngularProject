@@ -9,10 +9,14 @@
       width: 5px;
       height: 5px;
       border-radius: 4px;
+      margin-left: 4px;
       border:1px solid white;
       
       &.active {
         background:white;
+      }
+      &:first-child {
+        margin-left: 0;
       }
     }
   }

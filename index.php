@@ -52,7 +52,7 @@
           </div>
 
           <!-- search result cards -->
-          <div class="search-result">
+          <div class="search-result" id="card-swipe">
             <div class="icon-card" ng-repeat="icon in iconResults">
               <div class="icon-holder">
                 <div class="icon circle">
@@ -82,11 +82,7 @@
           <!-- card orbs -->
           <div class="card-position">
             <ul>
-              <li class="active"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li ng-repeat="icon in iconResults"></li>
             </ul>
           </div>
 
