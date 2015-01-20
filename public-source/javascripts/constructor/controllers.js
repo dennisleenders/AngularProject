@@ -44,21 +44,22 @@
                 "name": "Kyle Tezak",
                 "label": "meat",
                 "src": "public/media/images/noun/groceries/meat.svg"
-            }],
-        "general": [{
-                "name": "Andy Santos-Johnson",
-                "label": "currency exchange",
-                "src": "public/media/images/noun/general/currency.svg"
             },
+            {
+                "name": "Kyle Tezak",
+                "label": "meat",
+                "src": "public/media/images/noun/groceries/meat.svg"
+            }],
+        "general": [
+            // {
+            //     "name": "Andy Santos-Johnson",
+            //     "label": "currency exchange",
+            //     "src": "public/media/images/noun/general/currency.svg"
+            // },
             {
                 "name": "SuperAtic LABS",
                 "label": "information",
                 "src": "public/media/images/noun/general/information.svg"
-            },
-            {
-                "name": "Jonathan Higley",
-                "label": "map",
-                "src": "public/media/images/noun/general/map.svg"
             },
             {
                 "name": "Ulrich Pohl",

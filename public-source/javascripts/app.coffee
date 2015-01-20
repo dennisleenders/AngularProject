@@ -8,6 +8,7 @@
 //= require constructor/services.js
 //= require constructor/controllers.js
 //= require constructor/directives.js
+//= require constructor/scale-words.js
 
 
 `
