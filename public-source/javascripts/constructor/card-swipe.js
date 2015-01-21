@@ -1,4 +1,3 @@
-var currentIcon;
 
 // checking our own Hammer js gesture actions
 cardEl.on("panright", function(e) {
@@ -10,7 +9,18 @@ cardEl.on("panleft", function(e) {
 });
 
 cardEl.on("doubletap", function(e) {
-  addIcontoSentence(currentIcon);
+  addIconToSentence(currentIcon);
+});
+
+// The touch gestures for the sentence creator
+// tap will initiate the fullscreen
+sentenceHammer.on("tap", function(e){
+  $(sentenceItemHammerEl).addClass('fullscreen');
+});
+
+// press will initiate the deletion
+sentenceHammer.on("press", function(e){
+  console.log(e.target);
 });
 
 // funtion that swaps the cards around. 
@@ -80,35 +90,20 @@ function sliderDotProgression(direction) {
   }
 }
 
+function addIconToSentence(icon){
+  if (sentenceLength <= 2) {
+    $('.help-text').hide();
+    iconSrc = icon.find('img').attr('src');
 
-// function swapCard(position, direction) {
-//   var cards = $(".icon-card");
+    $('.sentence-item').each(function(index,el){
+      if(index == sentenceLength){
+        $(el).find('img').attr('src',iconSrc);
+        $(el).css({'display':'inline-block'});
+      }
+    });
 
-//   if(isSwiped == false && cards.length != 0){
+    sentenceLength++
+  }
+}
 
-//     var selectedCard;
-//     var nthChild;
-
-//     if(direction == "left" && cardPosition < (cards.length - 1)){
-//       nthChild = ":nth-of-type(" + (cards.length - position) + ")";
-//       selectedCard = $(".icon-card" + nthChild)
-//       selectedCard.addClass("swiped");
-      
-      
-//       cardPosition = cardPosition + 1;
-//       sliderDotProgression(direction)
-
-//     }else if(direction == "right" && cardPosition != 0){
-//       nthChild = ":nth-of-type(" + (cards.length - position + 1) + ")";
-//       selectedCard = $(".icon-card" + nthChild);
-//       selectedCard.removeClass("swiped");
-
-//       //currentIcon = selectedCard;
-
-//       cardPosition = cardPosition - 1;
-//       sliderDotProgression(direction)
-//     }
-
-//     swapCardTimeout();
-//   }
-// }
+//function removeIconFromSentence(){} // LATE FEATURE 

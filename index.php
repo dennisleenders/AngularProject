@@ -57,7 +57,7 @@
               <div class="icon-card" ng-repeat="icon in iconResults">
                 <div class="icon-holder">
                   <div class="icon circle">
-                    <img src="{{icon.preview_url}}">
+                    <img ng-src="{{icon.preview_url}}">
                   </div>
                 </div>
                   <div class="author">
@@ -91,14 +91,18 @@
           <!-- sentence creator -->
           <div class="sentence-creator">
             <div class="help-text">Double click an icon to add it to a sentence</div>
-            <div class="icon-holder">
-              <div class="icon"></div>
-
-              <div class="icon plus">+</div>
-              <div class="icon"></div>
-
-              <div class="icon plus">+</div>
-              <div class="icon"></div>
+            <div class="sentence-holder" id="sentence-item-press">
+              <div class="sentence-item" data-icon-position="first">
+                <div class="icon"><img src=""></div>
+                <div class="icon plus">+</div>
+              </div>
+              <div class="sentence-item" data-icon-position="second">
+                <div class="icon"><img src=""></div>
+                <div class="icon plus">+</div>
+              </div>
+              <div class="sentence-item" data-icon-position="third">
+                <div class="icon"><img src=""></div>
+              </div>
             </div>
           </div>
 
