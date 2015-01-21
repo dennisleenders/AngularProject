@@ -1,14 +1,16 @@
+var currentIcon;
+
 // checking our own Hammer js gesture actions
 cardEl.on("panright", function(e) {
-    swapCard(cardPosition, "right")
+  swapCard(cardPosition, "right")
 });
 
 cardEl.on("panleft", function(e) {
-    swapCard(cardPosition, "left");
+  swapCard(cardPosition, "left");
 });
 
-cardEl.on("doubletap tap", function(e) {  
-    console.log(e.type);
+cardEl.on("doubletap", function(e) {
+  addIcontoSentence(currentIcon);
 });
 
 // funtion that swaps the cards around. 
@@ -16,16 +18,30 @@ cardEl.on("doubletap tap", function(e) {
 // if there are even cards in the ng-repeat (cards.length will be updated)
 // since ng-repeat will dynamicly create more cards when we search.
 function swapCard(position, direction) {
-  var cards = $(".icon-card"); 
+  var cards = $(".icon-card");
+
   if(isSwiped == false && cards.length != 0){
+
     var selectedCard;
     var nthChild;
+    var currentChild;
+    var currentCard;
 
     if(direction == "left" && cardPosition < (cards.length - 1)){
+      // This will give the swiped card it's 'swipe' class
+      // By checking it's position by (the amount of cards - the position of that card)
+      // Then it will add a class on that CHILD
       nthChild = ":nth-of-type(" + (cards.length - position) + ")";
       selectedCard = $(".icon-card" + nthChild)
       selectedCard.addClass("swiped");
 
+      // This is the current card that the user is on, since we're swiping left
+      // we need an extra selector that actually does the same thing as swiping right.
+      // otherwise you can never select the right card.
+      currentChild = ":nth-of-type(" + (cards.length - position - 1) + ")";
+      currentCard = $(".icon-card" + currentChild);
+      currentIcon = currentCard;
+      
       cardPosition = cardPosition + 1;
       sliderDotProgression(direction)
 
@@ -34,10 +50,15 @@ function swapCard(position, direction) {
       selectedCard = $(".icon-card" + nthChild);
       selectedCard.removeClass("swiped");
 
+      // This is the current card that you see
+      // it's different from swiping left, since swiping right resets the cards position
+      // making it the visible one at that moment in time
+      currentIcon = selectedCard;
+
       cardPosition = cardPosition - 1;
       sliderDotProgression(direction)
-
     }
+
     swapCardTimeout();
   }
 }
@@ -58,3 +79,36 @@ function sliderDotProgression(direction) {
     sliderDots.find('li.active').removeClass("active").prev().addClass("active");
   }
 }
+
+
+// function swapCard(position, direction) {
+//   var cards = $(".icon-card");
+
+//   if(isSwiped == false && cards.length != 0){
+
+//     var selectedCard;
+//     var nthChild;
+
+//     if(direction == "left" && cardPosition < (cards.length - 1)){
+//       nthChild = ":nth-of-type(" + (cards.length - position) + ")";
+//       selectedCard = $(".icon-card" + nthChild)
+//       selectedCard.addClass("swiped");
+      
+      
+//       cardPosition = cardPosition + 1;
+//       sliderDotProgression(direction)
+
+//     }else if(direction == "right" && cardPosition != 0){
+//       nthChild = ":nth-of-type(" + (cards.length - position + 1) + ")";
+//       selectedCard = $(".icon-card" + nthChild);
+//       selectedCard.removeClass("swiped");
+
+//       //currentIcon = selectedCard;
+
+//       cardPosition = cardPosition - 1;
+//       sliderDotProgression(direction)
+//     }
+
+//     swapCardTimeout();
+//   }
+// }
