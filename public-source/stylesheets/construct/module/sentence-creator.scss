@@ -8,34 +8,55 @@
   border-top:1px solid white;
   padding-top:15px; 
 
-  .icon-holder{
+  .help-text {
+    display: block;
+    font-family: "Raleway";
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 40px;
+    color:white;
+  }
+
+  .sentence-holder{
     display: block;
     position: relative;
     height: 100%;
     width: 100%;
-    
-    .icon{
-      display: inline-block;
-      position: relative;
-      width: 35px;
-      height: 35px;
-      border-radius: 35px;
-      border:1px solid white;
-      background: white;
-      vertical-align: middle;
+    .sentence-item {
+      display: none;
+      .icon{
+        display: inline-block;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+        border:1px solid white;
+        background: white;
+        vertical-align: middle;
 
-      &.plus {
-        width: auto;
-        height: auto;
-        font-family: "Raleway";
-        font-size: 32px;
-        padding:0 10px;
-        color: white;
-        background:none;
-        border:0;
-        border-radius:0;
+        &.plus {
+          width: auto;
+          height: auto;
+          font-family: "Raleway";
+          font-size: 32px;
+          padding:0 10px;
+          color: white;
+          background:none;
+          border:0;
+          border-radius:0;
+        }
+
+        img {
+          display: block;
+          position: absolute;
+          width: 21px;
+          top:50%;
+          left:50%;
+          @include transform(translate(-50%,-50%));
+        }
+        
       }
     }
-
   }
 }

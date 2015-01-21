@@ -1,12 +1,9 @@
 var wrapperElement = $(".noun-wrapper");
 var swipeElement = document.getElementById('homescreen-swipe');
 
-var modeSelection = new Hammer(swipeElement);
-
 modeSelection.on("panleft panright", function(e) {
     swipeMove(e.type);
 });
-
 
 function swipeMove(direction){
   if(direction == 'panright'){
