@@ -5,6 +5,10 @@
 $pink:#ed6565;
 $orange:#f0b483;
 $black:#1a1a1a;
+$whitegray:rgb(155, 155, 155);
+$animationSpeed: .4s;
+
+$sentenceMargin: -20px;
 
 // Mixin
 @mixin keyframes($animation-name){
@@ -40,4 +44,18 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+input {
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius:0;
+}
+
+svg {
+  text {
+    display:none;
+  }
 }

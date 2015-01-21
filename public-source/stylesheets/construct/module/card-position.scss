@@ -1,0 +1,26 @@
+.card-position {
+  display: none;
+  position: relative;
+  width: 100%;
+  
+  ul {
+    li {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 4px;
+      margin-left: 4px;
+      border:1px solid white;
+      @include transition(all $animationSpeed);
+      
+      &.active {
+        background:white;
+        @include transition(all $animationSpeed);
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+}
