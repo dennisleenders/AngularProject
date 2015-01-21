@@ -1,3 +1,4 @@
+// checking our own Hammer js gesture actions
 cardEl.on("panright", function(e) {
     swapCard(cardPosition, "right")
 });
@@ -6,6 +7,9 @@ cardEl.on("panleft", function(e) {
     swapCard(cardPosition, "left");
 });
 
+cardEl.on("doubletap tap", function(e) {  
+    console.log(e.type);
+});
 
 // funtion that swaps the cards around. 
 // It first checks if the card swap animation is still in progress &&

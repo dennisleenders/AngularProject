@@ -8,6 +8,15 @@
   border-top:1px solid white;
   padding-top:15px; 
 
+  .help-text {
+    font-family: "Raleway";
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 40px;
+    color:white;
+  }
+
   .icon-holder{
     display: block;
     position: relative;
@@ -15,7 +24,7 @@
     width: 100%;
     
     .icon{
-      display: inline-block;
+      display: none;
       position: relative;
       width: 35px;
       height: 35px;

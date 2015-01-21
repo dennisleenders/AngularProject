@@ -90,6 +90,7 @@
 
           <!-- sentence creator -->
           <div class="sentence-creator">
+            <div class="help-text">Double click an icon to add it to a sentence</div>
             <div class="icon-holder">
               <div class="icon"></div>
 
