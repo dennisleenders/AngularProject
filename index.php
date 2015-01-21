@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html >
 <!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
@@ -14,7 +14,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
     <title>Noun Translate</title>
-
     <!--=== Favicon ===-->
     <link rel='shortcut icon' type='image/x-icon' href='public/media/img/favicon.ico' />
 
@@ -125,6 +124,58 @@
       --><section class="words">
         <div class="colored-sidebar"></div>
         <!-- content -->
+        <div class="previous-button"></div>
+        <div class="word-container" ng-controller="imageController as imageCtrl">
+          <h1><span>noun</span>words</h1>
+          <div class="category-body">
+            <p><span>noun</span>travel</p><hr>
+            <div class="category-section"    ng-repeat="icon in imageList.travel">
+              <div class="category-image" ng-click="imageClick($index, 'travel')" ng-class="{ 'active' : $index == selectedIndex && category == 'travel'}">
+                <img  src="{{icon.src}}" ng-class="{ 'active' : $index == selectedIndex && category == 'travel'}"/>
+                <div class="category-text" ng-class="{ 'active' : $index == selectedIndex && category == 'travel'}"><p>Created by: {{icon.name}}</p></div>
+              </div>
+            </div>
+
+            <p><span>noun</span>groceries</p><hr>
+            <div class="category-section"    ng-repeat="icon in imageList.groceries">
+              <div class="category-image" ng-click="imageClick($index, 'groceries')" ng-class="{ 'active' : $index == selectedIndex && category == 'groceries'}">
+                <img  src="{{icon.src}}" ng-class="{ 'active' : $index == selectedIndex && category == 'groceries'}"/>
+                <div class="category-text" ng-class="{ 'active' : $index == selectedIndex && category == 'groceries'}"><p>Created by: {{icon.name}}</p></div>
+              </div>
+            </div>
+
+            <p><span>noun</span>general</p><hr>
+            <div class="category-section"    ng-repeat="icon in imageList.general">
+              <div class="category-image" ng-click="imageClick($index, 'general')" ng-class="{ 'active' : $index == selectedIndex && category == 'general'}">
+                <img  src="{{icon.src}}" ng-class="{ 'active' : $index == selectedIndex && category == 'general'}"/>
+                <div class="category-text" ng-class="{ 'active' : $index == selectedIndex && category == 'general'}"><p>Created by: {{icon.name}}</p></div>
+              </div>
+            </div>
+
+            <p><span>noun</span>recreation</p><hr>
+            <div class="category-section"    ng-repeat="icon in imageList.recreation">
+              <div class="category-image" ng-click="imageClick($index, 'recreation')" ng-class="{ 'active' : $index == selectedIndex && category == 'recreation'}">
+                <img  src="{{icon.src}}" ng-class="{ 'active' : $index == selectedIndex && category == 'recreation'}"/>
+                <div class="category-text" ng-class="{ 'active' : $index == selectedIndex && category == 'recreation'}"><p>Created by: {{icon.name}}</p></div>
+              </div>
+            </div>
+
+            <p><span>noun</span>health</p><hr>
+            <div class="category-section"    ng-repeat="icon in imageList.health">
+              <div class="category-image" ng-click="imageClick($index, 'health')" ng-class="{ 'active' : $index == selectedIndex && category == 'health'}">
+                <img  src="{{icon.src}}" ng-class="{ 'active' : $index == selectedIndex && category == 'health'}"/>
+                <div class="category-text" ng-class="{ 'active' : $index == selectedIndex && category == 'health'}"><p>Created by: {{icon.name}}</p></div>
+              </div>
+            </div>
+
+            <p><span>noun</span>transport</p><hr>
+            <div class="category-section"    ng-repeat="icon in imageList.transport">
+              <div class="category-image" ng-click="imageClick($index, 'transport')" ng-class="{ 'active' : $index == selectedIndex && category == 'transport'}">
+                <img  src="{{icon.src}}" ng-class="{ 'active' : $index == selectedIndex && category == 'transport'}"/>
+                <div class="category-text" ng-class="{ 'active' : $index == selectedIndex && category == 'transport'}"><p>Created by: {{icon.name}}</p></div>
+              </div>
+            </div>
+        </div>
       </section><!--
     --></div>
 

@@ -1,4 +1,3 @@
-
 var app = angular.module('nounTranslate', []);
 
 app.controller('apiController', function($scope, $http){

@@ -7,4 +7,6 @@
 //= require constructor/searchbar.js
 //= require constructor/swipe-controller.js
 //= require constructor/card-swipe.js
+//= require constructor/controllers.js
+//= require constructor/scale-words.js
 `
