@@ -65,13 +65,14 @@
         display: inline-block;
         position: relative;
         width: 75%;
-        padding-top:15px;
+        padding-top:35px;
         border-top:1px solid black;
 
         .word {
           font-family: "Raleway";
           font-size: 16px;
           letter-spacing: 1px;
+          padding: 8px;
         }
       }
     }
@@ -84,7 +85,7 @@
         }
       }
       .search-completion {
-        height: 360px;
+        height: 330px;
         @include transition(height .8s ease-out);
         backface-visibility:hidden;
       }

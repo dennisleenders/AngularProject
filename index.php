@@ -69,14 +69,21 @@
             <!-- empty search card -->
             <div class="empty-card">
               <div class="icon"><div ng-include="'public/media/svg/search.svg'"></div></div>
-              <div class="text"><p>Search for a word you want to have translated into your own fancy icon. You can click on the icons to 'add' them below, to form your own sentence</p></div>
+              <div class="text"><p>Search for a word you want to have translated into your own fancy icon.</p></div>
             </div>
           </div>
 
           <!-- search suggestions -->
           <div class="search-completion">
             <div class="completion-content">
-              <div class="word">plane</div>
+              <div class="word">information</div>
+              <div class="word">direction</div>
+              <div class="word">hospital</div>
+              <div class="word">money</div>
+              <div class="word">toilet</div>
+              <div class="word">food</div>
+              <div class="word">atm</div>
+              <div class="word">taxi</div>
             </div>
           </div>
 
