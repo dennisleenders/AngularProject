@@ -57,7 +57,7 @@
       height:0px;
       background: white;
       text-align:center;
-      @include transition(height .8s ease-out);
+      @include transition(height .4s ease-out);
       backface-visibility: hidden;
       overflow: hidden;
 
@@ -86,7 +86,7 @@
       }
       .search-completion {
         height: 330px;
-        @include transition(height .8s ease-out);
+        @include transition(height .4s ease-out);
         backface-visibility:hidden;
       }
     }

@@ -17,13 +17,12 @@ var currentIcon = $('.icon-card:last-of-type').find('img');
 var sentenceLength = 0;
 
 // -- Hammer Js -- //
-var cardEl = new Hammer.Manager(cardSwipeEl);
+var modeSelection = new Hammer(swipeElement);
 var sentenceHammer = new Hammer(sentenceItemHammerEl);
+var cardEl = new Hammer.Manager(cardSwipeEl);
 cardEl.add( new Hammer.Tap({ event: 'doubletap', taps: 2 }) );
 cardEl.add( new Hammer.Pan({ event: 'panright', direction:Hammer.DIRECTION_RIGHT}) );
 cardEl.add( new Hammer.Pan({ event: 'panleft', direction:Hammer.DIRECTION_LEFT}) );
-
-var modeSelection = new Hammer(swipeElement);
 
 // -- Slider Dots -- //
 var sliderDots = $('.card-position');
@@ -32,3 +31,7 @@ var sliderDots = $('.card-position');
 var searchField = $(".search-field");
 var searchContent = $(".sentence-content");
 var searchForm = $(".sentence-content .form");
+var searchCancel = $('.search-icon');
+
+// -- Word Suggestion Field -- //
+var suggestedWords = $('.completion-content .word');
