@@ -18,12 +18,10 @@
     <link rel='shortcut icon' type='image/x-icon' href='public/media/img/favicon.ico' />
 
     <!--=== Apple Icon ===-->
-<!--     <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="image/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="image/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="image/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-startup-image" href="image/apple-touch-startup-640x920.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)">
-    <link rel="apple-touch-startup-image" href="image/apple-touch-startup-320x460.png" media="(device-width: 320px)"> -->
+    <!--iOS 7 iPhone -->
+    <link href="/static/images/apple-touch-icon-120x120.png" sizes="120x120" rel="apple-touch-icon">
+    <!-- iOS 6 iPhone -->
+    <link href="/static/images/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
 
     <!--=== Stylesheet ===-->
     <link rel="stylesheet" type="text/css" href="public/stylesheets/main.css">
