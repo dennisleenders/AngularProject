@@ -28,6 +28,14 @@ app.controller('apiController', function($scope, $http){
       }).success(function(data){
         // If the call was a success we will set the json to the Controller's $scope (this).
         // This way our directives in the html can read them.
+        
+        // We will first check if there are pictures without authors and give them an anonymous name
+        for (var i = 0; i < data.icons.length; i++) {
+          if(data.icons[i].uploader == undefined || data.icons[i].uploader == "") {
+            data.icons[i].uploader = {"name":"Anonymous"};
+          }
+        };
+
         $scope.iconResults = data.icons;
 
         // Will reset the cardPosition, so that the the cardSwipe() function gets correct values
