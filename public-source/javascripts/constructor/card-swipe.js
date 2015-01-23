@@ -9,7 +9,10 @@ cardEl.on("panleft", function(e) {
 });
 
 cardEl.on("doubletap", function(e) {
-  addIconToSentence(currentIcon);
+  var cards = $(".icon-card");
+  if (cards.length != 0){
+    addIconToSentence(currentIcon);
+  }
 });
 
 // The touch gestures for the sentence creator
@@ -33,7 +36,6 @@ sentenceHammer.on("press", function(e){
 // since ng-repeat will dynamicly create more cards when we search.
 function swapCard(position, direction) {
   var cards = $(".icon-card");
-
   if(isSwiped == false && cards.length != 0){
 
     var selectedCard;
