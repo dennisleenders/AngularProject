@@ -43,6 +43,7 @@ app.controller('apiController', function($scope, $http){
 
         // This will display:inline-block the little orbs that indicate what card you're watching
         $scope.sliderDot();
+        $scope.goFullscreenRemove();
         cardHolderEl.show();
       }).error(function(data){
         console.log("Ajax fail");
@@ -54,5 +55,9 @@ app.controller('apiController', function($scope, $http){
     //in the HTML the ng-class="{active:$first}" will add .active to the first ng-repeated slider dot
     sliderDots.show();
   };
+
+  $scope.goFullscreenRemove = function() {
+    goFullscreenEl.removeClass('active');
+  }
 
 });

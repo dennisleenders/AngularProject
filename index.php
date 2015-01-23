@@ -92,6 +92,8 @@
             </ul>
           </div>
 
+          <div class="go-fullscreen"><p>click the sentence to go fullscreen</p></div>
+
           <!-- sentence creator -->
           <div class="sentence-creator">
             <div class="help-text">Double click an icon to add it to a sentence</div>

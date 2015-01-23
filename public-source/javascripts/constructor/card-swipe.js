@@ -12,6 +12,7 @@ cardEl.on("doubletap", function(e) {
   var cards = $(".icon-card");
   if (cards.length != 0){
     addIconToSentence(currentIcon);
+    goFullscreenEl.addClass('active');
   }
 });
 

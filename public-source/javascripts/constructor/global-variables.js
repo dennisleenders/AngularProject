@@ -37,3 +37,6 @@ var searchCancel = $('.search-icon');
 
 // -- Word Suggestion Field -- //
 var suggestedWords = $('.completion-content .word');
+
+// -- Go Fullscreen -- //
+var goFullscreenEl = $('.go-fullscreen');
