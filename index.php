@@ -110,6 +110,9 @@
                 <div class="icon"><img src=""></div>
               </div>
             </div>
+            <div class="cancel">
+              <img src="public/media/img/cross-icon-white.png">
+            </div>
           </div>
 
         </div>

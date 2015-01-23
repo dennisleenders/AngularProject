@@ -15,8 +15,12 @@ cardEl.on("doubletap", function(e) {
 // The touch gestures for the sentence creator
 // tap will initiate the fullscreen
 sentenceHammer.on("tap", function(e){
-  $(sentenceItemHammerEl).addClass('fullscreen');
+  $(sentenceCreatorEl).addClass('fullscreen');
 });
+
+$(sentenceFullscreenCancelEl).on("click", function(){
+  $(sentenceCreatorEl).removeClass('fullscreen');
+})
 
 // press will initiate the deletion
 sentenceHammer.on("press", function(e){
@@ -98,7 +102,7 @@ function addIconToSentence(icon){
     $('.sentence-item').each(function(index,el){
       if(index == sentenceLength){
         $(el).find('img').attr('src',iconSrc);
-        $(el).css({'display':'inline-block'});
+        $(el).addClass('show');
       }
     });
 

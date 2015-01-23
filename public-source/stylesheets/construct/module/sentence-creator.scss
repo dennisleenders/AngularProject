@@ -18,6 +18,17 @@
     color:white;
   }
 
+  .cancel {
+    display: none;
+    position: fixed;
+    top:5px;
+    right:10px;
+
+    img {
+      width:50px;
+    }
+  }
+
   .sentence-holder{
     display: block;
     position: relative;
@@ -54,9 +65,59 @@
           top:50%;
           left:50%;
           @include transform(translate(-50%,-50%));
-        }
-        
+        } 
+      }
+      &.show {
+        display: inline-block;
       }
     }
+  }
+  &.fullscreen {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background:$black;
+    box-sizing:border-box;
+    border:0;
+    padding: 33px;
+
+    .sentence-holder {
+      position: absolute;
+      width:auto;
+      height: auto;
+      left:50%;
+      top:50%;
+      @include transform(translate(-50%,-50%));
+
+      .sentence-item {
+        &.show{
+        display: block;
+
+          .icon {
+            display: block;
+            margin:0 auto;
+            width:80px;
+            height:80px;
+            border-radius:80px;
+
+            &.plus {
+              width: auto;
+              height: auto;
+              font-size: 75px;
+            }
+
+            img {
+              width:40px;
+              top:53%;
+            }
+          }
+        }
+      } 
+    }
+    .cancel {
+      display: block;
+    }    
   }
 }

@@ -13,6 +13,8 @@ var isSwiped = false;
 // -- Sentence Creator -- //
 var sentenceItemHammerEl = document.getElementById('sentence-item-press');
 var sentenceItemEl = $('.sentence-item');
+var sentenceCreatorEl = $('.sentence-creator');
+var sentenceFullscreenCancelEl = $('.sentence-creator .cancel');
 var currentIcon = $('.icon-card:last-of-type').find('img');
 var sentenceLength = 0;
 
