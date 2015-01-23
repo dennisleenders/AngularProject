@@ -8,10 +8,12 @@
     <!--=== META TAGS ===-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="author" content="Dennis Leenders and Tom Luijten">
+    <!-- Web app tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Noun">
 
     <title>Noun Translate</title>
     <!--=== Favicon ===-->
@@ -19,9 +21,9 @@
 
     <!--=== Apple Icon ===-->
     <!--iOS 7 iPhone -->
-    <link href="/static/images/apple-touch-icon-120x120.png" sizes="120x120" rel="apple-touch-icon">
+    <link href="public/media/image/appicon/120x120.png" sizes="120x120" rel="apple-touch-icon">
     <!-- iOS 6 iPhone -->
-    <link href="/static/images/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+    <link href="public/media/image/appicon/114x114.png" sizes="114x114" rel="apple-touch-icon">
 
     <!--=== Stylesheet ===-->
     <link rel="stylesheet" type="text/css" href="public/stylesheets/main.css">
